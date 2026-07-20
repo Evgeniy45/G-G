@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-title: 'Bebas Neue', sans-serif;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+.hero__title,
+.about__title,
+.members__title,
+.concerts__title,
+.contacts__title {
+    font-family: var(--font-title);
+    letter-spacing: 1px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
