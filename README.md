@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# 🎸 G&G — Офіційний сайт музичного гурту
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Стильний сучасний лендінг для музичного гурту «Грим та Грім», розроблений із використанням передових веб-технологій. Сайт містить інформацію про гурт, розклад концертів, фотогалерею, контакти та інтерактивну форму для бронювання квитків.
 
-Currently, two official plugins are available:
+## 🔗 Посилання
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live Demo:** [Переглянути сайт наживо](https://evgeniy45.github.io/G-G/)
+- **GitHub Profile:** [Evgeniy45](https://github.com/Evgeniy45)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Технології та інструменти
 
-## Expanding the ESLint configuration
+Проєкт створено за допомогою сучасного стек-теху фронтенд-розробки:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React (v19)** — бібліотека для побудови компонентного інтерфейсу та динамічного управління станом.
+- **TypeScript** — сувора типізація коду для підвищення надійності та запобігання помилкам.
+- **Vite** — надшвидкий інструментарій збірки та локального середовища розробки.
+- **SCSS (Sass)** — препроцесор CSS для гнучкого управління стилями, змінними та вкладеними структурами.
+- **HTML5 / CSS3** — семантична розмітка та сучасні стандарти стилізації сторінок.
+- **GitHub Actions / GitHub Pages** — автоматизований деплой та хостинг проєкту.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Особливості проєкту
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- **Адаптивний дизайн:** Повна оптимізація під мобільні пристрої, планшети та десктопи.
+- **Мобільне меню (Бургер):** Анімоване повно-екранне меню з плавним виїздом та блокуванням скролу сторінки у відкритому стані.
+- **Інтерактивна модалка:** Функціональне модальне вікно для замовлення квитків із валідацією та станом успішної відправки.
+- **Компонентна архітектура:** Чистий, модульний та підтримуваний код, розбитий на ізольовані компоненти.
