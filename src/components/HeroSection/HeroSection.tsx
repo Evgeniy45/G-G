@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './HeroSection.scss';
+import { BookingModal } from '../BookingModal/BookingModal';
 
 export const HeroSection = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <section className="hero" id="hero">
             <div className="hero__container container">
@@ -17,7 +20,12 @@ export const HeroSection = () => {
                     </p>
                 </div>
 
-                <button className="hero__button">ЗАМОВИТИ КВИТОК</button>
+                <button className="hero__button" onClick={() => setIsModalOpen(true)}>ЗАМОВИТИ КВИТОК</button>
+
+                <BookingModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
             </div>
         </section>
     );

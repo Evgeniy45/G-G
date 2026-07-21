@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import './ConcertTable.scss';
+import { BookingModal } from '../BookingModal/BookingModal';
 
 const concerts = [
     { id: 1, location: 'Київ — Docker-G Pub', seats: '250', datetime: '25.10.2026, 19:00' },
@@ -8,6 +10,8 @@ const concerts = [
 ];
 
 export const ConcertTable = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="concerts" id="concerts">
             <div className="concerts__container container">
@@ -29,7 +33,7 @@ export const ConcertTable = () => {
                                     <span className="concerts__td">{concert.seats}</span>
                                     <span className="concerts__td">{concert.datetime}</span>
                                     <div className="concerts__td concerts__td--action">
-                                        <button className="concerts__button">Замовити квиток</button>
+                                        <button className="concerts__button" onClick={() => setIsModalOpen(true)}>Замовити квиток</button>
                                     </div>
                                 </div>
                             ))}
@@ -37,6 +41,11 @@ export const ConcertTable = () => {
                     </div>
                 </div>
             </div>
+
+            <BookingModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </section>
     );
 };
